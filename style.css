@@ -20,6 +20,9 @@
 .text-info {
   color: rgb(114, 114, 114);
 }
+.text-orange {
+  color: rgb(255, 144, 14);
+}
 
 .bg-light {
   background-color: rgba(255, 144, 14, 0.1);
@@ -33,6 +36,15 @@
   font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main > section {
+  margin-top: 130px;
 }
 
 /* header styles */
@@ -81,14 +93,41 @@
   font-weight: 700;
   font-size: 4rem;
 }
+.banner-img {
+  width: 100%;
+}
 
-.banner-img{width: 100%;}
+/* feature realted style  */
+.teams {
+  align-items: center;
+  gap: 73px;
+  /* margin: 0 auto; */
+}
 
+.team-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
 
+.team-features {
+  max-width: 537px;
+}
+
+.feature-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+#ql{
+  font-weight: 500;
+}
 
 /* responsive media queary */
 @media screen and (max-width: 576px) {
-  .navbar, .nav-links{
+  .navbar,
+  .nav-links {
     flex-direction: column;
   }
 }
