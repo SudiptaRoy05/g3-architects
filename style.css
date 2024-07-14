@@ -81,3 +81,14 @@
   font-weight: 700;
   font-size: 4rem;
 }
+
+.banner-img{width: 100%;}
+
+
+
+/* responsive media queary */
+@media screen and (max-width: 576px) {
+  .navbar, .nav-links{
+    flex-direction: column;
+  }
+}
