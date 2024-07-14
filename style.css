@@ -120,14 +120,35 @@ main > section {
   text-align: left;
 }
 
-#ql{
+#ql {
   font-weight: 500;
 }
 
 /* responsive media queary */
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links{
     flex-direction: column;
+  }
+
+  .teams {
+    flex-direction: column-reverse;
+    padding: 20px;
+    margin-top: 0px;
+  }
+  .team-img-container{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* medium size device  */
+
+@media screen and (min-width: 576px ) and (max-width: 992px) {
+  .teams {
+    flex-direction: column-reverse;
+    padding: 20px;
+    margin-top: 0px;
   }
 }
