@@ -44,8 +44,6 @@
   /* text-align: left; */
 }
 
-
-
 main {
   max-width: 1440px;
   margin: 0 auto;
@@ -122,36 +120,123 @@ main > section {
   max-width: 537px;
 }
 
-
 #ql {
   font-weight: 500;
+}
+
+/* fact style */
+
+.fact-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100.8px;
+  margin-top: 100.8px;
+}
+.fact-description {
+  max-width: 542px;
+}
+.fact-card {
+  border: 1px solid salmon;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fact-number {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.fact-name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* sponsors section  */
+.sponsores-info {
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.sponsors-companies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsors-companies img {
+  filter: grayscale(100%);
 }
 
 /* responsive media queary */
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links{
+  .nav-links {
     flex-direction: column;
   }
-
   .teams {
     flex-direction: column-reverse;
     padding: 20px;
     margin-top: 0px;
   }
-  .team-img-container{
+  .team-img-container,
+  .fact-container,
+  .sponsors-companies {
     grid-template-columns: 1fr;
   }
+  .some-fact {
+    margin-top: 20px;
+  }
+  .fact-container, .sponsors-companies {
+    justify-items: center;
+  }
 
+  .sponsors-companies{
+    gap: 10px;
+  }
+  .sponsors-companies img{
+    width: 50%;
+  }
+
+  body {
+    padding: 0px 10px;
+  }
 }
-
 
 /* medium size device  */
 
-@media screen and (min-width: 576px ) and (max-width: 992px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  body {
+    padding: 0px 10px;
+  }
   .teams {
     flex-direction: column-reverse;
     padding: 20px;
     margin-top: 0px;
   }
+  .fact-container, .sponsors-companies{
+    grid-template-columns: repeat(2, 1fr);
+    /* align-items: center; */
+    justify-content: center;
+    padding: 60px;
+    margin-top: 0px;
+  }
+  .some-fact {
+    margin-top: 20px;
+  }
+
+  .sponsors-companies{
+    gap: 20px;
+    justify-items: center;
+  }
+  /* .sponsors-companies img{
+    margin-left: 30px;
+  } */
 }
